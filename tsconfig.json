@@ -17,9 +17,19 @@
     "baseUrl": "src",
     "paths": {
       "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"]
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@containers/*": ["containers/*"],
+      "@icons/*": ["../public/assets/icons/*"],
+      "@logos/*": ["../public/assets/logos/*"],
+      "@context/*": ["context/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/hooks/useInitialState.js"
+  ],
   "exclude": ["node_modules"]
 }
