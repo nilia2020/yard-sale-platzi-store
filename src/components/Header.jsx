@@ -1,11 +1,11 @@
 import { useContext } from "react";
+import Link from "next/link";
 import Menu from "@components/Menu";
 import MyOrder from "@containers/MyOrder";
 import menu from "@icons/icon_menu.svg";
 import logo from "@logos/logo_yard_sale.svg";
 import AppContext from "../context/AppContext";
 import shoppingCart from "@icons/icon_shopping_cart.svg";
-import { Link } from "next/link";
 import Image from "next/image";
 import styles from "@styles/Header.module.scss";
 
@@ -15,41 +15,47 @@ const Header = () => {
   return (
     <>
       <nav className={styles.Nav}>
-        <Image src={menu} alt="menu" className="menu" />
-        <div className="navbar-left">
-          <Image src={logo} alt="logo" className="nav-logo" />
+        <Image src={menu} alt="menu" className={styles.menu} />
+        <div className={styles["navbar-left"]}>
+          <Link href="/">
+            <Image src={logo} alt="logo" className={styles["nav-logo"]} />
+          </Link>
+
           <ul>
             <li>
-              <Link href="/">All</Link>
+              <a>All</a>
             </li>
             <li>
-              <Link href="/">Clothes</Link>
+              <a>Clothes</a>
             </li>
             <li>
-              <Link href="/">Electronics</Link>
+              <a>Electronics</a>
             </li>
             <li>
-              <Link href="/">Furnitures</Link>
+              <a>Furnitures</a>
             </li>
             <li>
-              <Link href="/">Toys</Link>
+              <a>Toys</a>
             </li>
             <li>
-              <Link href="/">Others</Link>
+              <a>Others</a>
             </li>
           </ul>
         </div>
-        <div clasName="navbar-right">
+        <div className={styles["navbar-right"]}>
           <ul>
             <li
-              className="more-clickable-area navbar-email pointer"
+              className={`${styles["more-clickable-area"]} ${styles["navbar-email"]} ${styles["pointer"]}`}
               onClick={() => toggleMenu()}
             >
               platzi@example.com
             </li>
-            <li className="navbar-shopping-cart" onClick={() => toggleOrder()}>
+            <li
+              className={styles["navbar-shopping-cart"]}
+              onClick={() => toggleOrder()}
+            >
               <Image
-                className="more-clickable-area pointer"
+                className={`${styles["more-clickable-area"]} ${styles["pointer"]}`}
                 src={shoppingCart}
                 alt="shopping cart"
               />

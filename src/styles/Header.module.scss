@@ -9,12 +9,15 @@
   top: 0;
   background: white;
   width: calc(100% - 50px);
+  z-index: 1;
 }
 .menu {
   display: none;
+  padding-top: 20px;
 }
 .nav-logo {
   width: 100px;
+  padding-top: 20px;
 }
 .navbar-left ul,
 .navbar-right ul {
@@ -31,6 +34,7 @@
 .navbar-left ul {
   margin-left: 12px;
 }
+
 .navbar-left ul li a,
 .navbar-right ul li a {
   text-decoration: none;
@@ -38,6 +42,7 @@
   border: 1px solid var($--white);
   padding: 8px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .navbar-left ul li a:hover,
 .navbar-right ul li a:hover {
@@ -48,20 +53,23 @@
   color: var($--very-light-pink);
   font-size: var($--sm);
   margin-right: 12px;
+  cursor: pointer;
 }
 .navbar-shopping-cart {
   position: relative;
+  cursor: pointer;
 }
 .navbar-shopping-cart div {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   background-color: var($--hospital-green);
   border-radius: 50%;
+  border: 1px solid #000;
   font-size: var($--sm);
   font-weight: bold;
   position: absolute;
   top: -6px;
-  right: -3px;
+  right: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
