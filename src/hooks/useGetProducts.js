@@ -5,16 +5,13 @@ const useGetProducts = (API) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    async function fetchdata() {
+    async function fetchData() {
       const response = await axios(API);
-      setProducts(
-        response.data.filter((item) => {
-          return item.id < 200;
-        })
-      );
+      setProducts(response.data);
     }
-    fetchdata();
+    fetchData();
   }, [API]);
+
   return products;
 };
 

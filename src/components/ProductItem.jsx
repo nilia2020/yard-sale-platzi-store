@@ -17,13 +17,14 @@ const ProductItem = ({ product }) => {
       <Image
         src={product.images[0]}
         alt={product.title}
-        width={240}
-        height={240}
+        width={180}
+        height={180}
       />
       <div className={styles["product-info"]}>
         <div>
           <p>${product.price}</p>
           <p>{product.title}</p>
+          <p>{product.id}</p>
         </div>
         <figure
           className={styles["more-clickable-area"]}
